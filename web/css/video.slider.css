@@ -1,0 +1,19 @@
+
+.turnik-video .da-playlist .da-slider-dot[data-index="0"] {
+	background-image: url(../../web/images/video/turnik-video1.jpg);
+}
+
+.turnik-video .da-playlist .da-slider-dot[data-index="1"] {
+	background-image: url(../../web/images/video/turnik-video2.jpg);
+}
+.turnik-video .da-playlist .da-slider-dot[data-index="2"] {
+	background-image: url(../../web/images/video/powder-video.jpg);
+}
+
+.ladder-video .da-playlist .da-slider-dot[data-index="0"] {
+	background-image: url(../../web/images/video/ladder-video.jpg);
+}
+
+.ladder-video .da-playlist .da-slider-dot[data-index="1"] {
+	background-image: url(../../web/images/video/powder-video.jpg);
+}

@@ -20,7 +20,6 @@
 	
 	$.Slider.prototype 	= {
 		_init 				: function( options ) {
-			
 			this.options 		= $.extend( true, {}, $.Slider.defaults, options );
 			
 			this.$slides		= this.$el.children('div.da-slide');
@@ -29,18 +28,22 @@
 			this.current		= this.options.current;
 			
 			if( this.current < 0 || this.current >= this.slidesCount ) {
-			
 				this.current	= 0;
-			
 			}
 			
 			this.$slides.eq( this.current ).addClass( 'da-slide-current' );
 			
-			var $navigation		= $( '<nav class="da-dots"/>' );
-			for( var i = 0; i < this.slidesCount; ++i ) {
-			
-				$navigation.append( '<span/>' );
-			
+
+			if (this.options.playlist) {
+				var $navigation		= $( '<nav class="da-dots da-playlist"/>' );
+				for( var i = 0; i < this.slidesCount; ++i ) {
+					$navigation.append( '<span class="da-slider-dot" data-index="' + i + '">' );
+				}
+			} else {
+				var $navigation		= $( '<nav class="da-dots"/>' );
+				for( var i = 0; i < this.slidesCount; ++i ) {
+					$navigation.append( '<span/>' );
+				}
 			}
 			$navigation.appendTo( this.$el );
 			
